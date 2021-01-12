@@ -1,0 +1,75 @@
+# ===================================================================
+# Spring Boot configuration for the "prod" profile.
+#
+# This configuracion overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+# locale:
+#     default: es
+
+
+spring:
+    message:
+        basename: i18n/messages
+        encoding: UTF-8
+
+  # Configuración de la BASE DE DATOS
+  datasource:
+    dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+    url: jdbc:postgresql://127.0.0.1:5432/sife1701db
+    username: postgres
+    password: postgres
+    maximum-pool-size: 5
+
+  application:
+    url: http://plataformawp.es # URL en la que se aloja la aplicación
+  profiles:
+    active: prod
+  devtools:
+    restart:
+      enabled: false
+    livereload:
+      enabled: false
+  jpa:
+    show-sql: false
+
+  mail: # Configuración del servidor de correo
+    host: smtp.ionos.es
+    port: 587
+    username: admin@worldprofe.com
+    password: $Adminworldprofe.2020$
+    protocol: smtp
+    default-encoding: UTF-8
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: false
+
+properties:
+  paypal:
+    # Claves de producción creadas con cuenta info@db-asesores.es
+    clientID: AbKY6x2WwTioiaGYFk-SHeBJlKkPf7hcpiZrKCnJN0tlbDBpC8WmtB-7Ck7hYccCyI9Wt_X-sX2BBUWe
+    clientSecret: EFmaScqa-sRZMs1MtVQ00cyI9U5IVPyJpbHJftTWq8vpHK36t8Xss6m4STMPWyT6XbCVSzfKSVTAdL0b
+    environment: live
+
+  mail:
+    from: admin@worldprofe.com # Configuración del email de envío
+    name: WORLDPROFE
+  social:
+    redirectAfterSignIn: "/social-auth"
+    redirectAfterSignUp: "/social-register"
+
+  smsapi:
+    token: "6RhjJ3TUAU64sjQXxLXm8NBop0xwHzatdSMAubVJ"
+    #url: "http://api.smsapi.pl/"
+    url: "http://api.smsapi.com/"
+
+server:
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json

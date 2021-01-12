@@ -1,0 +1,106 @@
+# ===================================================================
+# Spring Boot configuracion for the "dev" profile.
+#
+# This configuracion overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+# locale:
+#     default: es
+# ++++++++++++++++++
+
+server:
+    port: 8080
+    compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
+
+
+spring:
+    message:
+        basename: i18n/messages
+        encoding: UTF-8
+    # Configuración de la BASE DE DATOS
+    datasource:
+        dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+        url: jdbc:postgresql://localhost:5432/sife1701db
+        username: postgres
+        password: postgres
+        maximum-pool-size: 5
+
+    application:
+        url: http://localhost:9000
+    profiles:
+        active: dev
+    devtools:
+        restart:
+            enabled: true
+        livereload:
+            enabled: false # we use gulp + BrowserSync for livereload
+
+    jpa:
+      show-sql: false
+
+    mail:
+      host: smtp.google.com
+      port: 587
+      username: rosel11078@gmail.com
+      password:
+      protocol: smtp
+      default-encoding: UTF-8
+      properties.mail.smtp:
+        auth: true
+        starttls.enable: true
+
+    # social:
+    #     # see https://developers.google.com/+/web/signin/server-side-flow#step_1_create_a_client_id_and_client_secret
+    #   google:
+    #     clientId: xxxxxxxx
+    #     clientSecret: xxxxxxxx
+    #     # see https://developers.facebook.com/docs/facebook-login
+    #   facebook:
+    #     clientId: xxxxxxxx
+    #     clientSecret: xxxxxxxx
+
+properties:
+  async:
+      corePoolSize: 2
+      maxPoolSize: 50
+      queueCapacity: 10000
+
+  paypal:
+    # Datos de desarrollo
+    clientID: xxxxxxxx
+    clientSecret: xxxxxxxx
+    environment: sandbox
+
+  # social:
+  #   redirectAfterSignIn: "/social-auth"
+  #   redirectAfterSignUp: "/social-register"
+
+  mail:
+    from: admin@worldprofe.com
+    name: Worldprofe
+
+  social:
+    redirectAfterSignIn: "http://localhost:9000/#/social-auth"
+    redirectAfterSignUp: "http://localhost:9000/#/social-register"
+
+  smsapi:
+    token: "6RhjJ3TUAU64sjQXxLXm8NBop0xwHzatdSMAubVJ"
+    #url: "http://api.smsapi.pl/"
+    url: "http://api.smsapi.com/"
+
+javamelody:
+  advisor-auto-proxy-creator-enabled: false
+  init-parameters:
+    application-name: SIFE1701
+    authorized-users: admin:worldprofe
+    monitoring-path: /monitoring
+    log: false
+    url-exclude-pattern: (/resources/.*|/upload/.*|/templates/.*)

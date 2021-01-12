@@ -26,7 +26,7 @@ deploy_war:
   stage: war
   script:
    -  echo "${CI_COMMIT_REF_NAME}"     
-   -  unzip /root/worldprofe/war/*.war -d /usr/local/tomcat8/webapps/plataformawp/ROOT/   
+   -  cp -r /root/worldprofe/war/* /usr/local/tomcat8/webapps/plataformawp/ROOT/
   tags:
    - plataformawp
   when: always
