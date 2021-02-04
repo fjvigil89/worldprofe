@@ -10,7 +10,11 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-<<<<<<< HEAD
+
+# locale:
+#     default: es
+
+
 # locale:
 #     default: es
 
@@ -21,10 +25,12 @@ server:
     mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
 
 
+
 spring:
     message:
         basename: i18n/messages
         encoding: UTF-8
+
   # Configuración de la BASE DE DATOS
     datasource:
         dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
@@ -44,9 +50,9 @@ spring:
             enabled: false # we use gulp + BrowserSync for livereload
     jpa:
       show-sql: false
-=======
+
 spring:
->>>>>>> d09843e915049721670bb7619fd5b5fa1efde72e
+
 
   # Configuración de la BASE DE DATOS
   datasource:
@@ -70,14 +76,15 @@ spring:
 
   mail: # Configuración del servidor de correo
     host: smtp.ionos.es
-    port: 587 
+    port: 587
     username: admin@worldprofe.com
     password: $Adminworldprofe.2020$
     protocol: smtp
     default-encoding: UTF-8
     properties.mail.smtp:
       auth: true
-      starttls.enable: false 
+
+      starttls.enable: false
 
 properties:
   paypal:
@@ -92,6 +99,11 @@ properties:
   social:
     redirectAfterSignIn: "/social-auth"
     redirectAfterSignUp: "/social-register"
+
+  smsapi:
+    token: "6RhjJ3TUAU64sjQXxLXm8NBop0xwHzatdSMAubVJ"
+    #url: "http://api.smsapi.pl/"
+    url: "http://api.smsapi.com/"
 
 server:
   compression:

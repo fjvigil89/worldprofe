@@ -27,6 +27,9 @@ import java.util.Collection;
 
 @ComponentScan(basePackageClasses = {_configBasePackage.class, _modelBasePackage.class,
     _controllersBasePackage.class, _utilBasePackage.class})
+
+@ComponentScan(basePackages="es.enxenio.sife1701.sms.shcedule.SmsTaskScheduler")
+
 @EnableConfigurationProperties({MyProperties.class})
 @EnableScheduling
 @EnableAutoConfiguration

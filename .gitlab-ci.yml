@@ -1,18 +1,32 @@
 ---
 ## CI/CO para desplegar el .war de la plataforma
 before_script:
+<<<<<<< HEAD
+  - apt update 
+  - apt install -y unzip  
   - echo "${CI_COMMIT_REF_NAME}"
+  - mkdir -p /root/worldprofe
+  - mkdir -p /usr/local/tomcat8/webapps/plataformawp/ROOT/
+=======
+  - echo "${CI_COMMIT_REF_NAME}"
+>>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
 
 stages:
   - deploy
   - war
   - reset
+<<<<<<< HEAD
+=======
   - optinoal
+>>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
 deploy:
   stage: deploy
   script:
    -  echo "${CI_COMMIT_REF_NAME}"
+<<<<<<< HEAD
+=======
    -  sh /usr/local/tomcat8/bin/shutdown.sh
+>>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
    -  rm -rf /root/worldprofe
    -  rm -rf /usr/local/tomcat8/webapps/plataformawp/ROOT/*
    -  sudo git clone git@gitlab.com:frankjosue.vigilvega/worldprofe.git /root/worldprofe
@@ -20,18 +34,30 @@ deploy:
    - plataformawp
   when: always     
   only: 
+<<<<<<< HEAD
+    - master
+    - develop
+=======
     - master   
+>>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
 
 deploy_war:
   stage: war
   script:
    -  echo "${CI_COMMIT_REF_NAME}"     
-   -  cp -r /root/worldprofe/war/* /usr/local/tomcat8/webapps/plataformawp/ROOT/
+<<<<<<< HEAD
+   -  cd /root/worldprofe/war && unzip *.war -d /usr/local/tomcat8/webapps/plataformawp/ROOT/   
+=======
+   -  unzip /root/worldprofe/war/*.war -d /usr/local/tomcat8/webapps/plataformawp/ROOT/   
+>>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
   tags:
    - plataformawp
   when: always
   only:
     - master
+<<<<<<< HEAD
+    - develop
+=======
 
 deploy_optional:
   stage: optinoal
@@ -50,14 +76,24 @@ deploy_optional:
   only:
     - master
 
+>>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
 
 deploy_reset:
   stage: reset
   script:
+<<<<<<< HEAD
+   -  sh /usr/local/tomcat/bin/shutdown.sh
+   -  sh /usr/local/tomcat/bin/startup.sh
+=======
    -  chmod -R 777 /usr/local/tomcat8/webapps/plataformawp/
    -  sh /usr/local/tomcat8/bin/startup.sh
+>>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
   tags:
    - plataformawp
   when: always
   only:
     - master
+<<<<<<< HEAD
+    - develop
+=======
+>>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
