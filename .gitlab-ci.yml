@@ -14,7 +14,9 @@ deploy:
    -  echo "${CI_COMMIT_REF_NAME}"
    -  sh /usr/local/tomcat8/bin/shutdown.sh
    -  rm -rf /root/worldprofe
+   -  mv /usr/local/tomcat8/webapps/plataformawp/ROOT/upload /usr/local/tomcat8/webapps/plataformawp/ROOT/
    -  rm -rf /usr/local/tomcat8/webapps/plataformawp/ROOT/*
+   -  mv /usr/local/tomcat8/webapps/plataformawp/upload /usr/local/tomcat8/webapps/plataformawp/ROOT/
    -  sudo git clone git@gitlab.com:frankjosue.vigilvega/worldprofe.git /root/worldprofe
   tags:
    - plataformawp
