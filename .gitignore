@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 .gradle
 .idea
 /build
@@ -29,34 +27,3 @@ src/main/webapp/client/assets/fonts/*
 
 /yarn.lock
 *.iml
-=======
-.gradle
-.idea
-/build
-dist
-.settings
-.classpath
-.project
-
-log/
-out/
-
-tmp
-bower_components
-node_modules
-npm-debug.log
-
-/src/main/webapp/client/menu/*.json
-
-src/main/webapp/client/assets/css
-!src/main/webapp/client/assets/fonts
-src/main/webapp/client/assets/fonts/*
-!src/main/webapp/client/assets/fonts/static
-
-/src/main/webapp/upload/
-/src/main/webapp/client/app/app.constants.js
-/bin/
-
-/yarn.lock
-*.iml
->>>>>>> 72d2793e36e6da77c4af2412e8f79d73999d1398
