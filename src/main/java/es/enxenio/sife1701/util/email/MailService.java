@@ -66,7 +66,12 @@ public class MailService {
 
 
     @Autowired
+<<<<<<< HEAD
     private JavaMailSenderImpl javamailSender;
+=======
+    private JavaMailSenderImpl mailSender;
+
+>>>>>>> 5a7d63769985d53a888c9aed0c11fab00d5270c3
 
     @Autowired
     private MessageSource messageSource;
@@ -113,7 +118,13 @@ public class MailService {
 
         //Spring Framework JavaMailSenderImplementation    
 
+<<<<<<< HEAD
     	JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+=======
+        //JavaMailSenderImpl mailSender = new JavaMailSenderImpl();       
+
+
+>>>>>>> 5a7d63769985d53a888c9aed0c11fab00d5270c3
         mailSender.setHost("smtp.ionos.es");
         mailSender.setPort(465);
         //setting username and password
