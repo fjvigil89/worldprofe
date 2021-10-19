@@ -10,18 +10,17 @@
     </a>
 </div>
 
-<div class="row">
-    <div class="col-sm-3">
-        <filter filter="ctrl.filter.key"></filter>
-    </div>
-    <div class="col-sm-3">
-        <usuario-gestion-eliminados filter="ctrl.filter"></usuario-gestion-eliminados>
-    </div>
+<div class="row form-group">
+	<div class="col-sm-3">
+    	<filter filter="ctrl.filter.key"></filter>
+	</div>
+	<div class="col-sm-5">
+    	<usuario-gestion-eliminados filter="ctrl.filter"></usuario-gestion-eliminados>	
+	</div>
 </div>
-
 <div class="row form-group">
     <!--Meses-->
-    <div class="col-sm-offset-6 col-sm-4">
+    <div class="col-sm-12">
         <div class="form-inline">
             <div class="form-group">
                 <label-form key="admin.profesor.list.meses"></label-form>
@@ -31,27 +30,20 @@
                         {{'enum.mes.' + month | translate}}
                     </option>
                 </select>
-            </div>
-        </div>
-    </div>
-    <!--Años-->
-    <div class="col-sm-2">
-        <div class="form-inline">
-            <div class="form-group">
+                 <!--Años-->
                 <label-form key="admin.profesor.list.anos"></label-form>
                 <select id="years" ng-model="ctrl.filter.ano" class="form-control">
                     <option value="" translate="enum.all"></option>
                     <option ng-repeat="year in ctrl.years" value="{{year}}">{{year}}</option>
-                </select>
-            </div>
-        </div>
-    </div>
+                </select>                
+            </div>       
+        </div>         
+    </div>                
 </div>
 
 <div class="empty" ng-show="ctrl.empty" translate="profesor.empty"></div>
 
-<table ng-show="!ctrl.empty" ng-table="ctrl.tableParams"
-       class="table table-condensed table-bordered table-striped table-hover" class="ng-cloak">
+<table ng-show="!ctrl.empty" ng-table="ctrl.tableParams" class="table table-condensed table-bordered table-striped table-hover" class="ng-cloak">
 
     <tr ng-repeat="element in $data track by element.id" class="animate">
         <td data-title="'admin.profesor.form.nombre' | translate" sortable="'nombre'">

@@ -2,10 +2,11 @@
     <h1>{{'profesor.busqueda' | translate}}</h1>
 
     <div class="row">
-        <div class="col-sm-2">
-            <div class="form-group">
-                <select-form id="idiomas" model="ctrl.filter.idioma" label="profesor.ensena"
-                             options="$resolve.idiomas" display="nombre" empty="profesor.idioma"></select-form>
+        <div class="col-sm-3">
+            <div class="form-group" >
+                <select-form id="idiomas" style="font-size: 16px; height: 39px;" model="ctrl.filter.idioma" label="profesor.ensena"
+                             options="$resolve.idiomas" display="nombre" empty="profesor.idioma" 
+                             ></select-form>
             </div>
         </div>
         <!--<div class="col-sm-2">-->
@@ -14,14 +15,14 @@
         <!--options="$resolve.niveles" display="nombre" empty="multiselect.cualquiera"></select-form>-->
         <!--</div>-->
         <!--</div>-->
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <div class="form-group">
                 <enum-select id="dia" label="profesor.dia" model="ctrl.filter.dia"
                              options="$resolve.dias" base="enum.dia" empty="multiselect.cualquiera"
                              required="false"></enum-select>
             </div>
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <div class="form-group">
                 <enum-select id="horadia" label="profesor.horadia" model="ctrl.filter.horadia"
                              options="$resolve.horadias" base="enum.horadia" empty="multiselect.cualquiera"
@@ -35,7 +36,7 @@
         <!--template="'{{option.nombre}}'"></multi-select>-->
         <!--</div>-->
         <!--</div>-->
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             <div class="form-group">
                 <multi-select label="profesor.de" id="paises" options="$resolve.paises"
                               model="ctrl.filter.paises" display="nombre" empty="profesor.pais"

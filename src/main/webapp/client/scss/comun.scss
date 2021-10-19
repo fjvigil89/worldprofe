@@ -116,7 +116,7 @@ Notificaciones
     .btn-notificacion {
         padding: 24px 8px;
         color: #666;
-        font-size: 18px;
+        font-size: 20px;
 
         .contador {
             bottom: 15px;
@@ -125,10 +125,18 @@ Notificaciones
             height: 17px;
             width: 17px;
             padding: 5px 0;
-            font-size: 11px;
+            font-size: 14px;
             line-height: 9px;
         }
     }
+}
+
+.profesor{
+	presentacion{
+		span.text{
+			font-size: 15px;
+		}
+	}
 }
 
 .notificaciones {
@@ -251,8 +259,8 @@ Formularios
 
 label {
     margin-bottom: 0;
-    font-size: 14px;
-    color: #999;
+    font-size: 18px;
+    color: #6e6e6e;
 }
 
 label.titulo {
@@ -264,7 +272,7 @@ label.titulo {
 
 label.label-destacada {
     margin-bottom: 5px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .has-feedback .form-control {
@@ -289,6 +297,16 @@ select ~ .form-control-feedback {
 
 .help-block {
     font-size: 12px;
+}
+
+.form-control{
+	height: 36px;
+	font-size: 16px;
+}
+
+.dropdown-toggle {
+	color:#555555;
+	height:36px;
 }
 
 form {
@@ -369,6 +387,7 @@ fieldset.element {
 .btn {
     &.bottom-label {
         margin-top: 38px;
+		font-size: 25px;
     }
 
     /* Loading dentro de un botón */
@@ -437,6 +456,7 @@ Nav-tabs
 
 .nav-tabs {
     margin-bottom: 15px;
+	font-size: 20px;
 }
 
 /* ==========================================================================
