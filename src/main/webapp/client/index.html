@@ -33,9 +33,9 @@
 
     <link rel="stylesheet" href="app/components/buttontop/button-top.css">
 
-    <link rel="stylesheet" href="app/components/loading/loading.css">
-
     <link rel="stylesheet" href="app/components/idiomas/idiomas.css">
+
+    <link rel="stylesheet" href="app/components/loading/loading.css">
 
     <link rel="stylesheet" href="app/components/menu/menu.css">
 
@@ -59,11 +59,11 @@
 
     <link rel="stylesheet" href="app/components/form/tooltip/tooltip.css">
 
-    <link rel="stylesheet" href="app/components/form/archivos/imagen/imagen.css">
-
     <link rel="stylesheet" href="app/components/form/archivos/download/download.css">
 
     <link rel="stylesheet" href="app/components/form/archivos/fileupload/file-upload.css">
+
+    <link rel="stylesheet" href="app/components/form/archivos/imagen/imagen.css">
 
     <link rel="stylesheet" href="app/components/form/archivos/imagenperfil/imagen-perfil.css">
 
@@ -173,23 +173,27 @@
 
 <script src="app/app.module.js"></script>
 
+<script src="app/public/cuenta/miespacio/profesores/profesores.state.js"></script>
+
 <script src="app/public/cuenta/miespacio/perfil/perfil.state.js"></script>
 
 <script src="app/public/cuenta/miespacio/perfil/perfil.form.controller.js"></script>
 
-<script src="app/public/cuenta/miespacio/profesores/profesores.state.js"></script>
-
 <script src="app/public/cuenta/miespacio/paquetescreditos/paquetescreditos.state.js"></script>
 
-<script src="app/public/cuenta/miespacio/miagenda/mi-agenda.state.js"></script>
+<script src="app/public/cuenta/miespacio/miscompras/mis-compras.state.js"></script>
 
 <script src="app/public/cuenta/miespacio/misalumnos/mis-alumnos.state.js"></script>
 
-<script src="app/public/cuenta/miespacio/miscompras/mis-compras.state.js"></script>
+<script src="app/public/cuenta/miespacio/miagenda/mi-agenda.state.js"></script>
 
 <script src="app/components/form/archivos/imagenperfilver/imagen-perfil-ver.component.js"></script>
 
 <script src="app/components/form/archivos/imagenperfil/imagen-perfil.component.js"></script>
+
+<script src="app/components/form/archivos/imagen/imagen.directive.js"></script>
+
+<script src="app/components/form/archivos/imagen/imagen.controller.js"></script>
 
 <script src="app/components/form/archivos/fileupload/file-upload.directive.js"></script>
 
@@ -199,10 +203,6 @@
 
 <script src="app/components/form/archivos/download/download.controller.js"></script>
 
-<script src="app/components/form/archivos/imagen/imagen.directive.js"></script>
-
-<script src="app/components/form/archivos/imagen/imagen.controller.js"></script>
-
 <script src="app/public/profesor/list/profesor.list.controller.js"></script>
 
 <script src="app/public/profesor/info/profesor.details.controller.js"></script>
@@ -211,21 +211,21 @@
 
 <script src="app/public/cuenta/validar/validar.controller.js"></script>
 
-<script src="app/public/cuenta/registro/registro.state.js"></script>
-
-<script src="app/public/cuenta/registro/registro.controller.js"></script>
-
 <script src="app/public/cuenta/recuperar/recuperar.state.js"></script>
 
 <script src="app/public/cuenta/recuperar/recuperar.init.controller.js"></script>
 
 <script src="app/public/cuenta/recuperar/recuperar.finish.controller.js"></script>
 
+<script src="app/public/cuenta/registro/registro.state.js"></script>
+
+<script src="app/public/cuenta/registro/registro.controller.js"></script>
+
+<script src="app/public/cuenta/miespacio/mi-espacio.state.js"></script>
+
 <script src="app/public/cuenta/logout/logout.state.js"></script>
 
 <script src="app/public/cuenta/logout/logout.controller.js"></script>
-
-<script src="app/public/cuenta/miespacio/mi-espacio.state.js"></script>
 
 <script src="app/public/components/usuarioreserva/usuario-reserva.component.js"></script>
 
@@ -261,17 +261,17 @@
 
 <script src="app/components/form/tesauro/tesauro.directive.js"></script>
 
-<script src="app/components/form/password/password-strength-bar.directive.js"></script>
-
 <script src="app/components/form/select/select-form.component.js"></script>
+
+<script src="app/components/form/password/password-strength-bar.directive.js"></script>
 
 <script src="app/components/form/multiselect/multi-select.component.js"></script>
 
 <script src="app/components/form/listform/list-form.component.js"></script>
 
-<script src="app/components/form/filter/filter.input.component.js"></script>
-
 <script src="app/components/form/label/label-form.component.js"></script>
+
+<script src="app/components/form/filter/filter.input.component.js"></script>
 
 <script src="app/components/form/fecha/fecha.component.js"></script>
 
@@ -295,14 +295,6 @@
 
 <script src="app/admin/user/admin/admin.admin.controller.js"></script>
 
-<script src="app/public/home/home.state.js"></script>
-
-<script src="app/public/home/home.controller.js"></script>
-
-<script src="app/public/profesor/profesor.state.js"></script>
-
-<script src="app/public/compra/compra.state.js"></script>
-
 <script src="app/security/social/social.state.js"></script>
 
 <script src="app/security/social/social.service.js"></script>
@@ -314,6 +306,14 @@
 <script src="app/security/auth/auth.jwt.service.js"></script>
 
 <script src="app/security/auth/account.service.js"></script>
+
+<script src="app/public/profesor/profesor.state.js"></script>
+
+<script src="app/public/home/home.state.js"></script>
+
+<script src="app/public/home/home.controller.js"></script>
+
+<script src="app/public/compra/compra.state.js"></script>
 
 <script src="app/layouts/header/header.controller.js"></script>
 
@@ -331,15 +331,13 @@
 
 <script src="app/config/interceptor/auth-expired.interceptor.js"></script>
 
-<script src="app/components/ngtable/ng-table-helper.service.js"></script>
+<script src="app/components/util/parse-links.service.js"></script>
+
+<script src="app/components/util/compile.directive.js"></script>
 
 <script src="app/components/usuariogestion/usuario-gestion-eliminados.component.js"></script>
 
 <script src="app/components/usuariogestion/usuario-gestion-columna.component.js"></script>
-
-<script src="app/components/util/parse-links.service.js"></script>
-
-<script src="app/components/util/compile.directive.js"></script>
 
 <script src="app/components/statics/static.state.js"></script>
 
@@ -363,6 +361,8 @@
 
 <script src="app/components/pagination/pagination.component.js"></script>
 
+<script src="app/components/ngtable/ng-table-helper.service.js"></script>
+
 <script src="app/components/modal/modal.service.js"></script>
 
 <script src="app/components/modal/entity.modal.component.js"></script>
@@ -375,15 +375,13 @@
 
 <script src="app/components/menu/menu-item.directive.js"></script>
 
-<script src="app/components/idiomas/idiomas.component.js"></script>
-
 <script src="app/components/loading/loading.component.js"></script>
+
+<script src="app/components/idiomas/idiomas.component.js"></script>
 
 <script src="app/components/form/show-validation.directive.js"></script>
 
 <script src="app/components/form/radio-button.directive.js"></script>
-
-<script src="app/components/enum/enumerado.component.js"></script>
 
 <script src="app/components/filters/unique.filter.js"></script>
 
@@ -393,11 +391,15 @@
 
 <script src="app/components/filters/capitalize.filter.js"></script>
 
+<script src="app/components/enum/enumerado.component.js"></script>
+
 <script src="app/components/date/date.component.js"></script>
 
 <script src="app/components/buttontop/button-top.component.js"></script>
 
 <script src="app/components/booleano/booleano.component.js"></script>
+
+<script src="app/admin/user/password.admin.state.js"></script>
 
 <script src="app/components/alert/alert.service.js"></script>
 
@@ -416,8 +418,6 @@
 <script src="app/admin/profesor/profesor-form.admin.config.js"></script>
 
 <script src="app/admin/profesor/profesor-form.admin.component.js"></script>
-
-<script src="app/admin/user/password.admin.state.js"></script>
 
 <script src="app/admin/paquetecreditos/paquetecreditos.admin.state.js"></script>
 
@@ -447,6 +447,10 @@
 
 <script src="app/admin/empresa/empresa-form.admin.component.js"></script>
 
+<script src="app/admin/configuracion/configuracion.controller.js"></script>
+
+<script src="app/admin/configuracion/configuracion.admin.state.js"></script>
+
 <script src="app/admin/capacidad/capacidad.admin.state.js"></script>
 
 <script src="app/admin/capacidad/capacidad-form.admin.config.js"></script>
@@ -461,21 +465,17 @@
 
 <script src="app/admin/alumno/alumno-form.admin.component.js"></script>
 
-<script src="app/admin/configuracion/configuracion.controller.js"></script>
-
-<script src="app/admin/configuracion/configuracion.admin.state.js"></script>
-
 <script src="app/admin/agenda/agenda.admin.state.js"></script>
-
-<script src="app/public/public.state.js"></script>
-
-<script src="app/public/public.constants.js"></script>
 
 <script src="app/services/rutas.service.js"></script>
 
 <script src="app/services/language.service.js"></script>
 
 <script src="app/services/enum.service.js"></script>
+
+<script src="app/public/public.state.js"></script>
+
+<script src="app/public/public.constants.js"></script>
 
 <script src="app/entities/usuario.service.js"></script>
 

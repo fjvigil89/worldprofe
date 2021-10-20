@@ -8,6 +8,9 @@
 .multi-select button.btn {
     text-align: left;
     overflow: hidden;
+    font-size:16px;
+	line-height:normal;
+	color:#555555;
 }
 
 .multi-select button.btn .caret {

@@ -1,0 +1,910 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool",
+            "request": "launch",
+            "mainClass": "antlr.Tool",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(1)",
+            "request": "launch",
+            "mainClass": "antlr.build.Tool",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ASTFrame",
+            "request": "launch",
+            "mainClass": "antlr.debug.misc.ASTFrame",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(2)",
+            "request": "launch",
+            "mainClass": "antlr.preprocessor.Tool",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch JMSQueueSink",
+            "request": "launch",
+            "mainClass": "ch.qos.logback.classic.net.JMSQueueSink",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch JMSTopicSink",
+            "request": "launch",
+            "mainClass": "ch.qos.logback.classic.net.JMSTopicSink",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleSSLSocketServer",
+            "request": "launch",
+            "mainClass": "ch.qos.logback.classic.net.SimpleSSLSocketServer",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleSocketServer",
+            "request": "launch",
+            "mainClass": "ch.qos.logback.classic.net.SimpleSocketServer",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ISO8601Utils",
+            "request": "launch",
+            "mainClass": "com.fasterxml.jackson.databind.util.ISO8601Utils",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch JavassistProxyFactory",
+            "request": "launch",
+            "mainClass": "com.zaxxer.hikari.util.JavassistProxyFactory",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Application",
+            "request": "launch",
+            "mainClass": "es.enxenio.sife1701.Application",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyShell",
+            "request": "launch",
+            "mainClass": "groovy.lang.GroovyShell",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyMain",
+            "request": "launch",
+            "mainClass": "groovy.ui.GroovyMain",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyScriptEngine",
+            "request": "launch",
+            "mainClass": "groovy.util.GroovyScriptEngine",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(3)",
+            "request": "launch",
+            "mainClass": "groovyjarjarantlr.Tool",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(4)",
+            "request": "launch",
+            "mainClass": "groovyjarjarantlr.build.Tool",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ASTFrame(1)",
+            "request": "launch",
+            "mainClass": "groovyjarjarantlr.debug.misc.ASTFrame",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(5)",
+            "request": "launch",
+            "mainClass": "groovyjarjarantlr.preprocessor.Tool",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Textifier",
+            "request": "launch",
+            "mainClass": "groovyjarjarasm.asm.util.Textifier",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch CtClass",
+            "request": "launch",
+            "mainClass": "javassist.CtClass",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loader",
+            "request": "launch",
+            "mainClass": "javassist.Loader",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dump",
+            "request": "launch",
+            "mainClass": "javassist.tools.Dump",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch framedump",
+            "request": "launch",
+            "mainClass": "javassist.tools.framedump",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Compiler",
+            "request": "launch",
+            "mainClass": "javassist.tools.reflect.Compiler",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loader(1)",
+            "request": "launch",
+            "mainClass": "javassist.tools.reflect.Loader",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Viewer",
+            "request": "launch",
+            "mainClass": "javassist.tools.web.Viewer",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Webserver",
+            "request": "launch",
+            "mainClass": "javassist.tools.web.Webserver",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "net.bull.javamelody.Main",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch RealmBase",
+            "request": "launch",
+            "mainClass": "org.apache.catalina.realm.RealmBase",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bootstrap",
+            "request": "launch",
+            "mainClass": "org.apache.catalina.startup.Bootstrap",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(6)",
+            "request": "launch",
+            "mainClass": "org.apache.catalina.startup.Tool",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ServerInfo",
+            "request": "launch",
+            "mainClass": "org.apache.catalina.util.ServerInfo",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Version",
+            "request": "launch",
+            "mainClass": "org.apache.poi.Version",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch EscherDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ddf.EscherDump",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch OOXMLLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.dev.OOXMLLister",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch OOXMLPrettyPrint",
+            "request": "launch",
+            "mainClass": "org.apache.poi.dev.OOXMLPrettyPrint",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch RecordGenerator",
+            "request": "launch",
+            "mainClass": "org.apache.poi.dev.RecordGenerator",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch CommandLineTextExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.extractor.CommandLineTextExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch HPSFPropertiesExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.extractor.HPSFPropertiesExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch PropertyIDMap",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.wellknown.PropertyIDMap",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch BiffDrawingToXml",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.BiffDrawingToXml",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch BiffViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.BiffViewer",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch EFBiffViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.EFBiffViewer",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch FormulaViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.FormulaViewer",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReSave",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.ReSave",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch RecordLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.RecordLister",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.extractor.ExcelExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch OldExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.extractor.OldExcelExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSDump",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSHeaderDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSHeaderDumper",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSLister",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSViewer",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSReader",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.eventfilesystem.POIFSReader",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch NPOIFSFileSystem",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.filesystem.NPOIFSFileSystem",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch OPOIFSFileSystem",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.filesystem.OPOIFSFileSystem",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSFileSystem",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.filesystem.POIFSFileSystem",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch VBAMacroExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.macros.VBAMacroExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch DrawingDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.DrawingDump",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch FontMetricsDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.FontMetricsDumper",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch HexDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.HexDump",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch OOXMLLite",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.OOXMLLite",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XDGFVisioExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xdgf.extractor.XDGFVisioExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch HierarchyPrinter",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xdgf.util.HierarchyPrinter",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch VsdxToPng",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xdgf.util.VsdxToPng",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSLFPowerPointExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.extractor.XSLFPowerPointExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch PPTX2PNG",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xslf.util.PPTX2PNG",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSSFDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.dev.XSSFDump",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSSFSave",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.dev.XSSFSave",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSSFEventBasedExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.extractor.XSSFEventBasedExcelExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSSFExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xssf.extractor.XSSFExcelExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XWPFWordExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.xwpf.extractor.XWPFWordExtractor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch JarHelper",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.common.JarHelper",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch NameUtil",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.common.NameUtil",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Inst2Xsd",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.inst2xsd.Inst2Xsd",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch JamServiceFactory",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.jam.JamServiceFactory",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ParserClassBuilder",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.jam.internal.parser.ParserClassBuilder",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch REUtil",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.regex.REUtil",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Diff",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.Diff",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch FactorImports",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.FactorImports",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch InstanceValidator",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.InstanceValidator",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrettyPrinter",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.PrettyPrinter",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch RunXQuery",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.RunXQuery",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaCompiler",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.SchemaCompiler",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaCopy",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.SchemaCopy",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaResourceManager",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.SchemaResourceManager",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch StreamInstanceValidator",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.StreamInstanceValidator",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch TypeHierarchyPrinter",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.TypeHierarchyPrinter",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XSTCTester",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.XSTCTester",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XsbDumper",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.tool.XsbDumper",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch XPathGenerator",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.xpathgen.XPathGenerator",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaInstanceGenerator",
+            "request": "launch",
+            "mainClass": "org.apache.xmlbeans.impl.xsd2inst.SchemaInstanceGenerator",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Version(1)",
+            "request": "launch",
+            "mainClass": "org.aspectj.bridge.Version",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch PartialOrder",
+            "request": "launch",
+            "mainClass": "org.aspectj.util.PartialOrder",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch LexerFrame",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.antlr.LexerFrame",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(1)",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.antlr.Main",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Java2GroovyMain",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.antlr.java.Java2GroovyMain",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch genArrayAccess",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.classgen.genArrayAccess",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch genArrays",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.classgen.genArrays",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch genDgmMath",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.classgen.genDgmMath",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch genMathModification",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.classgen.genMathModification",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch DgmConverter",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.DgmConverter",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileSystemCompiler",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.FileSystemCompiler",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch GrapeMain",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.GrapeMain",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyStarter",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.GroovyStarter",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch GradleWrapperMain",
+            "request": "launch",
+            "mainClass": "org.gradle.wrapper.GradleWrapperMain",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Version(2)",
+            "request": "launch",
+            "mainClass": "org.hibernate.Version",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Version(3)",
+            "request": "launch",
+            "mainClass": "org.hibernate.annotations.common.Version",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch CustomVersionOneStrategy",
+            "request": "launch",
+            "mainClass": "org.hibernate.id.uuid.CustomVersionOneStrategy",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Helper",
+            "request": "launch",
+            "mainClass": "org.hibernate.id.uuid.Helper",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayHelper",
+            "request": "launch",
+            "mainClass": "org.hibernate.internal.util.collections.ArrayHelper",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaExport",
+            "request": "launch",
+            "mainClass": "org.hibernate.tool.hbm2ddl.SchemaExport",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaUpdate",
+            "request": "launch",
+            "mainClass": "org.hibernate.tool.hbm2ddl.SchemaUpdate",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaValidator",
+            "request": "launch",
+            "mainClass": "org.hibernate.tool.hbm2ddl.SchemaValidator",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch GenericSignatureParser",
+            "request": "launch",
+            "mainClass": "org.jboss.jandex.GenericSignatureParser",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(2)",
+            "request": "launch",
+            "mainClass": "org.jboss.jandex.Main",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch RrdCommander",
+            "request": "launch",
+            "mainClass": "org.jrobin.cmd.RrdCommander",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Convertor",
+            "request": "launch",
+            "mainClass": "org.jrobin.convertor.Convertor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch RrdDb",
+            "request": "launch",
+            "mainClass": "org.jrobin.core.RrdDb",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(3)",
+            "request": "launch",
+            "mainClass": "org.jrobin.core.jrrd.Main",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Epoch",
+            "request": "launch",
+            "mainClass": "org.jrobin.core.timespec.Epoch",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch DataProcessor",
+            "request": "launch",
+            "mainClass": "org.jrobin.data.DataProcessor",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch RrdInspector",
+            "request": "launch",
+            "mainClass": "org.jrobin.inspector.RrdInspector",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch PGJDBCMain",
+            "request": "launch",
+            "mainClass": "org.postgresql.util.PGJDBCMain",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch PSQLDriverVersion",
+            "request": "launch",
+            "mainClass": "org.postgresql.util.PSQLDriverVersion",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpringApplication",
+            "request": "launch",
+            "mainClass": "org.springframework.boot.SpringApplication",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch RemoteSpringApplication",
+            "request": "launch",
+            "mainClass": "org.springframework.boot.devtools.RemoteSpringApplication",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch EditBuildScript",
+            "request": "launch",
+            "mainClass": "repackage.EditBuildScript",
+            "projectName": "worldprofe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Repackage",
+            "request": "launch",
+            "mainClass": "repackage.Repackage",
+            "projectName": "worldprofe"
+        }
+    ]
+}

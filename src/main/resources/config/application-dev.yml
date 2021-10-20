@@ -50,7 +50,7 @@ spring:
       host: smtp.google.com
       port: 587
       username: rosel11078@gmail.com
-      password: 
+      password:
       protocol: smtp
       default-encoding: UTF-8
       properties.mail.smtp:
@@ -86,10 +86,15 @@ properties:
   mail:
     from: admin@worldprofe.com
     name: Worldprofe
-      
+
   social:
     redirectAfterSignIn: "http://localhost:9000/#/social-auth"
     redirectAfterSignUp: "http://localhost:9000/#/social-register"
+
+  smsapi:
+    token: "6RhjJ3TUAU64sjQXxLXm8NBop0xwHzatdSMAubVJ"
+    #url: "http://api.smsapi.pl/"
+    url: "http://api.smsapi.com/"
 
 javamelody:
   advisor-auto-proxy-creator-enabled: false

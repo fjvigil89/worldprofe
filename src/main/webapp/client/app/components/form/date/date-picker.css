@@ -1,6 +1,7 @@
 /**/
 .date-picker .input-group-btn .btn {
     padding-bottom: 7px;
+    line-height: 20px;
 }
 
 .date-picker .btn {

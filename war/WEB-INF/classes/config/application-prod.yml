@@ -9,16 +9,6 @@
 # Full reference is available at:
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
-
-# locale:
-#     default: es
-
-
-spring:
-    message:
-        basename: i18n/messages
-        encoding: UTF-8
-
   # Configuración de la BASE DE DATOS
   datasource:
     dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
@@ -41,14 +31,14 @@ spring:
 
   mail: # Configuración del servidor de correo
     host: smtp.ionos.es
-    port: 587
+    port: 587 
     username: admin@worldprofe.com
     password: $Adminworldprofe.2020$
     protocol: smtp
     default-encoding: UTF-8
     properties.mail.smtp:
       auth: true
-      starttls.enable: false
+      starttls.enable: false 
 
 properties:
   paypal:
@@ -65,9 +55,9 @@ properties:
     redirectAfterSignUp: "/social-register"
 
   smsapi:
-    token: "6RhjJ3TUAU64sjQXxLXm8NBop0xwHzatdSMAubVJ"
-    #url: "http://api.smsapi.pl/"
-    url: "http://api.smsapi.com/"
+  token: "6RhjJ3TUAU64sjQXxLXm8NBop0xwHzatdSMAubVJ"
+  #url: "http://api.smsapi.pl/"
+  url: "http://api.smsapi.com/"
 
 server:
   compression:

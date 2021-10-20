@@ -3,6 +3,8 @@
     "login": "Iniciar sesión",
     "miagenda": {
       "title": "Mi agenda",
+      "Alumno":"Mi Agenda Alumno",
+      "Profesor":"Mi Agenda Profesor",
       "RECHAZADAS_O_CANCELADAS": "Canceladas",
       "TODOS": "Todas"
     },
