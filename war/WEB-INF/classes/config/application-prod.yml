@@ -40,26 +40,21 @@
       auth: true
       starttls.enable: false 
 
-properties:
-  paypal:
-    # Claves de producción creadas con cuenta info@db-asesores.es
-    clientID: AbKY6x2WwTioiaGYFk-SHeBJlKkPf7hcpiZrKCnJN0tlbDBpC8WmtB-7Ck7hYccCyI9Wt_X-sX2BBUWe
-    clientSecret: EFmaScqa-sRZMs1MtVQ00cyI9U5IVPyJpbHJftTWq8vpHK36t8Xss6m4STMPWyT6XbCVSzfKSVTAdL0b
-    environment: live
+  properties:
+    paypal:
+      # Claves de producción creadas con cuenta info@db-asesores.es
+      clientID: AbKY6x2WwTioiaGYFk-SHeBJlKkPf7hcpiZrKCnJN0tlbDBpC8WmtB-7Ck7hYccCyI9Wt_X-sX2BBUWe
+      clientSecret: EFmaScqa-sRZMs1MtVQ00cyI9U5IVPyJpbHJftTWq8vpHK36t8Xss6m4STMPWyT6XbCVSzfKSVTAdL0b
+      environment: live
 
-  mail:
-    from: admin@worldprofe.com # Configuración del email de envío
-    name: WORLDPROFE
-  social:
-    redirectAfterSignIn: "/social-auth"
-    redirectAfterSignUp: "/social-register"
+    mail:
+      from: admin@worldprofe.com # Configuración del email de envío
+      name: WORLDPROFE
+    social:
+      redirectAfterSignIn: "/social-auth"
+      redirectAfterSignUp: "/social-register"
 
-  smsapi:
-  token: "6RhjJ3TUAU64sjQXxLXm8NBop0xwHzatdSMAubVJ"
-  #url: "http://api.smsapi.pl/"
-  url: "http://api.smsapi.com/"
-
-server:
-  compression:
-    enabled: true
-    mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
+    server:
+      compression:
+        enabled: true
+        mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
