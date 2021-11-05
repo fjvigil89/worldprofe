@@ -9,6 +9,8 @@
 # Full reference is available at:
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
+
+spring:
   # Configuración de la BASE DE DATOS
   datasource:
     dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
