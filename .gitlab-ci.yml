@@ -7,7 +7,7 @@ stages:
   - deploy
   - war
   - reset
-  - optinoal
+  - optional
 deploy:
   stage: deploy
   script:
@@ -36,16 +36,10 @@ deploy_war:
     - master
 
 deploy_optional:
-  stage: optinoal
+  stage: optional
   script:
-   -  rm -rf /usr/local/tomcat8/webapps/plataformawp/ROOT/assets/* 
-   -  rm -rf /usr/local/tomcat8/webapps/plataformawp/ROOT/app/* 
-   -  rm  /usr/local/tomcat8/webapps/plataformawp/ROOT/index.html
    -  rm -rf /usr/local/tomcat8/webapps/plataformawp/ROOT/WEB-INF/classes/config/* 
    -  cp -r /usr/local/tomcat8/webapps/plataformawp2/ROOT/WEB-INF/classes/config/* /usr/local/tomcat8/webapps/plataformawp/ROOT/WEB-INF/classes/config/
-   -  cp -r /usr/local/tomcat8/webapps/plataformawp2/ROOT/app/* /usr/local/tomcat8/webapps/plataformawp/ROOT/app/
-   -  cp -r /usr/local/tomcat8/webapps/plataformawp2/ROOT/assets/* /usr/local/tomcat8/webapps/plataformawp/ROOT/assets/
-   -  cp  /usr/local/tomcat8/webapps/plataformawp2/ROOT/index.html /usr/local/tomcat8/webapps/plataformawp/ROOT/index.html
   tags:
    - plataformawp
   when: always
