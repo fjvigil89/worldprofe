@@ -122,11 +122,12 @@ nano /usr/local/tomcat8/conf/server.xml
 <Executor name="tomcatThreadPool" namePrefix="catalina-exec-"
 maxThreads="200" minSpareThreads="100"/>
 
+<!--
 <Connector executor="tomcatThreadPool"
-        port="8080" protocol="HTTP/1.1"
-        redirectPort="8443"
+        port="80" protocol="HTTP/1.1"
+        redirectPort="80"
         connectionTimeout="300000"
-        address="127.0.0.1"
+        address="82.223.46.142"
         maxPostSize="838860800"
         connectionUploadTimeout="36000000"
         disableUploadTimeout="false"
@@ -134,6 +135,18 @@ maxThreads="200" minSpareThreads="100"/>
         useBodyEncodingForURI="true"
         acceptorThreadCount="2"
         acceptCount="500" />
+-->
+<Connector port="443"
+        protocol="org.apache.coyote.http11.Http11Protocol"
+        maxThreads="150"
+        SSLEnabled="true"
+        scheme="https"
+        secure="true"
+        clientAuth="false"
+        sslProtocol="TLS"
+        keystoreFile = "/usr/local/tomcat8/cert/_.plataformawp.es_private_key.pfx"
+        keystoreType="PKCS12"
+         keystorePass = "plataformawp" />
 
   <!--  <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
