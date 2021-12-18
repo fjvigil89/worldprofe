@@ -288,3 +288,84 @@ local   all             postgres                                md5
 ```
 host    all             all             all                     md5
 ```
+### Add cron backups database
+```
+https://fab-peja.medium.com/backups-autom%C3%A1ticos-con-postgresql-bash-y-cronjobs-en-espa%C3%B1ol-b3c900e03fd9
+
+```
+```
+#!/bin/bash
+# vars
+backups_path="/var/lib/postgresql/cron/backups"
+database="sife1701db"
+current_date_time="`date +%Y%m%d%H%M%S`";
+# dump
+export PGPASSWORD="postgres"
+pg_dump -U postgres $database > $backups_path/$current_date_time.sql;
+
+# get size of dump
+size="`wc -c $backups_path/$current_date_time.sql`";
+# get oldest backup
+first_backup="`ls $backups_path | sort -n | head -1`"
+echo 'first backup '$first_backup
+# get size of oldest backup
+size_first="`wc -c $backups_path/$first_backup`"
+echo 'size_first '$size_first
+# get backups count
+backups_count="`find  $backups_path/*.sql -type f | wc -l`"
+echo 'backups_count '$backups_count
+# printing subject for email
+echo 'Subject:'$size >  $backups_path/$current_date_time.txt
+# condition for remove if there is more than 4 backups
+if [ $backups_count -ge 5 ] ; then
+ echo 'Greather than 5'
+ # removing backup
+ rm $backups_path/$first_backup
+ first_text="`ls $backups_path | sort -n | head -1`"
+ # removing text of backup
+ rm $backups_path/$first_text
+ # printing body explaining removed backup
+ printf "\nArchivo borrado: "$first_backup >>  $backups_path/$current_date_time.txt
+ printf "\nPeso: "$size_first >>  $backups_path/$current_date_time.txt
+fi
+# sending email
+#!/bin/bash
+# vars
+backups_path="/var/lib/postgresql/cron/backups"
+database="sife1701db"
+current_date_time="`date +%Y%m%d%H%M%S`";
+# dump
+export PGPASSWORD="postgres"
+pg_dump -U postgres $database > $backups_path/$current_date_time.sql;
+
+# get size of dump
+size="`wc -c $backups_path/$current_date_time.sql`";
+# get oldest backup
+first_backup="`ls $backups_path | sort -n | head -1`"
+echo 'first backup '$first_backup
+# get size of oldest backup
+size_first="`wc -c $backups_path/$first_backup`"
+echo 'size_first '$size_first
+# get backups count
+backups_count="`find  $backups_path/*.sql -type f | wc -l`"
+echo 'backups_count '$backups_count
+# printing subject for email
+echo 'Subject:'$size >  $backups_path/$current_date_time.txt
+# condition for remove if there is more than 4 backups
+if [ $backups_count -ge 5 ] ; then
+ echo 'Greather than 5'
+ # removing backup
+ rm $backups_path/$first_backup
+ first_text="`ls $backups_path | sort -n | head -1`"
+ # removing text of backup
+ rm $backups_path/$first_text
+ # printing body explaining removed backup
+ printf "\nArchivo borrado: "$first_backup >>  $backups_path/$current_date_time.txt
+ printf "\nPeso: "$size_first >>  $backups_path/$current_date_time.txt
+fi
+# sending email
+curl --url 'smtp://smtp.ionos.es:587' --ssl-reqd --mail-from 'admin@worldprofe.com' --mail-rcpt 'frankjosue.vigilvega@gmail.com' --upload-file $backups_path/$current_date_time.txt --user 'admin@worldprofe.com:$Adminworldprofe.2020$' --insecure
+
+
+
+```
