@@ -4,11 +4,11 @@
     "administradores": "Administradores",
     "register": "Crear administrador",
     "logout": "Salir",
-    "profesores": "Profesores/as",
+    "profesores": "Abogados/as",
     "empresas": "Empresas",
-    "alumnos": "Alumnos/as",
+    "alumnos": "Clientes/as",
     "alumno": "Alumno/a",
-    "profesor": "Profesor/a",
+    "profesor": "Abogado/a",
     "menu": {
       "home": "Inicio",
       "account": {
@@ -17,9 +17,9 @@
       "administradores": "Administradores",
       "register": "Crear administrador",
       "logout": "Salir",
-      "profesores": "Profesores/as",
+      "profesores": "Abogados/as",
       "empresas": "Empresas",
-      "alumnos": "Alumnos/as registrados/as",
+      "alumnos": "Clientes/as registrados/as",
       "usuarios": "Usuarios",
       "reserva": {
         "title": "Reservas",
@@ -30,12 +30,12 @@
       "miespacio": {
         "miagenda": "Mi agenda",
         "miscompras": "Mis compras",
-        "misalumnos": "Mis alumnos",
+        "misalumnos": "Mis clientes",
         "perfil": "Perfil",
         "title": "Mi espacio"
       },
       "configuracion": "Configuración",
-      "paquetescreditos": "Compra de clases"
+      "paquetescreditos": "Compra de servicios"
     },
     "button": {
       "accept": "Aceptar",
@@ -86,16 +86,16 @@
     "title": "Entrar",
     "info": {
       "titulo": "Registro",      
-      "mensaje": "Si no eres un alumno y quieres recibir clases de idiomas, regístrate de manera gratuíta. ",
+      "mensaje": "Si no eres un cliente y quieres recibir clases de idiomas, regístrate de manera gratuíta. ",
       "registrate": "Regístrate"
     },
     "tipo": {
-      "alumno": "Registro alumno/a"
+      "alumno": "Registro cliente/a"
     },
     "form": {
       "tipo": {
-        "alumno": "Registro alumno/a",
-        "profesor": "Registro profesor/a",
+        "alumno": "Registro cliente/a",
+        "profesor": "Registro Abogado/a",
         "administrador": "Registro administrador"
       },
       "save": "Registrarse",
@@ -192,7 +192,7 @@
   },
   "profesor": {
     "apellidos": "Apellidos",
-    "busqueda": "Búsqueda de profesores/as",
+    "busqueda": "Búsqueda de abogados/as",
     "capacidades": "Capacidades",
     "cif": "CIF",
     "cp": "CP",
@@ -201,7 +201,7 @@
     "dia": "Día",
     "direccion": "Dirección",
     "disponibilidad": "Disponibilidad",
-    "empty": "No hay profesores/as registrados/as",
+    "empty": "No hay abogados/as registrados/as",
     "ensena": "Enseña",
     "fechafin": "Fecha de fin de la clase",
     "fechainicio": "Fecha de comienzo de la clase",
@@ -209,7 +209,7 @@
     "horadia": "Franja horaria",
     "idioma": "Cualquier idioma",
     "idiomas": "Idiomas",
-    "listado": "Listado de profesores/as",
+    "listado": "Listado de abogados/as",
     "localidad": "Localidad",
     "nif": "NIF",
     "nivel": "Nivel",
@@ -220,7 +220,7 @@
     "skype": "Skype",
     "textopresentacion": "Texto de presentación",
     "descripcioncapacidades": "Capacidades",
-    "title": "Profesor/a",
+    "title": "Abogado/a",
     "zonahoraria": "Su zona horaria actual es {{gmt}}"
   },
   "multiselect": {
@@ -244,7 +244,7 @@
     },
     "creditos": {
       "aceptar": "Sí",
-      "devolver": "Devolver créditos al alumno/a",
+      "devolver": "Devolver créditos al cliente/a",
       "disponibles": "Créditos disponibles",
       "consumidos": "Créditos consumidos",
       "gastar": "Créditos de la reserva",
@@ -271,9 +271,9 @@
       },
       "incidencia": {
         "titulo": "Incidencia",
-        "info": "<p>Indique a continuación el motivo por el que la clase no se ha podido llevar a cabo.</p><p>Realizando esta acción se le devolverá el crédito de la clase al alumno.</p>"
+        "info": "<p>Indique a continuación el motivo por el que la clase no se ha podido llevar a cabo.</p><p>Realizando esta acción se le devolverá el crédito de la clase al cliente.</p>"
       },
-      "pendiente": "<p>Una vez el profesor evalúe la clase, podrás indicar que te ha parecido.</p>"
+      "pendiente": "<p>Una vez el abogado realice el servicio, podrás indicar que te ha parecido.</p>"
     },
     "evaluar": "Evaluar clase",
     "form": {
