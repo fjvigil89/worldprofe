@@ -54,11 +54,6 @@ properties:
     redirectAfterSignIn: "/social-auth"
     redirectAfterSignUp: "/social-register"
 
-  smsapi:
-  token: "6RhjJ3TUAU64sjQXxLXm8NBop0xwHzatdSMAubVJ"
-  #url: "http://api.smsapi.pl/"
-  url: "http://api.smsapi.com/"
-
 server:
   compression:
     enabled: true
