@@ -37,13 +37,14 @@ targetCompatibility = 1.8
 bootRepackage {
     mainClass = 'es.enxenio.sife1701.Application'
 }
-
 war {
+    enabled=true
     rootSpec.exclude("**/tomcat-*.jar")
     exclude("**/client")
     exclude("**/tmp")
     exclude("**/upload")
     from "dist"
+    archiveName 'worldprofe.war'
 }
 
 springBoot {
@@ -169,3 +170,4 @@ task wrapper(type: Wrapper) {
 
 task stage(dependsOn: 'bootRepackage') {
 }
+
