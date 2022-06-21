@@ -69,7 +69,7 @@
 <Executor name="tomcatThreadPool" namePrefix="catalina-exec-"
 maxThreads="200" minSpareThreads="100"/>
 
-
+<!--
 <Connector executor="tomcatThreadPool"
         port="80" protocol="HTTP/1.1"
         redirectPort="80"
@@ -82,7 +82,7 @@ maxThreads="200" minSpareThreads="100"/>
         useBodyEncodingForURI="true"
         acceptorThreadCount="2"
         acceptCount="500" />
-
+-->
 <Connector port="443"
         protocol="org.apache.coyote.http11.Http11Protocol"
         maxThreads="150"
