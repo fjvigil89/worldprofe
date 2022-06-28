@@ -11,10 +11,10 @@ buildscript {
         jcenter()
     	maven { url 'https://repo.spring.io/plugins-snapshot' }
 		maven { url 'https://plugins.gradle.org/m2/' }
-        maven { url 'http://repo.spring.io/milestone/' }
-        maven { url 'http://repo.spring.io/plugins-release' }
+        maven { url 'https://repo.spring.io/milestone/' }
+        maven { url 'https://repo.spring.io/plugins-release' }
         maven { url = uri('https://oss.sonatype.org/content/repositories/snapshots')}
-	    maven { url = uri('http://repo.maven.apache.org/maven2')}
+	    maven { url = uri('https://repo.maven.apache.org/maven2')}
     }
     dependencies {
         classpath group: 'net.ltgt.gradle', name: 'gradle-apt-plugin', version: '0.6'
@@ -37,13 +37,14 @@ targetCompatibility = 1.8
 bootRepackage {
     mainClass = 'es.enxenio.sife1701.Application'
 }
-
 war {
+    enabled=true
     rootSpec.exclude("**/tomcat-*.jar")
     exclude("**/client")
     exclude("**/tmp")
     exclude("**/upload")
     from "dist"
+    archiveName 'worldprofe.war'
 }
 
 springBoot {
@@ -140,19 +141,19 @@ dependencies {
     compile group: 'org.apache.poi', name: 'poi', version: '3.15'
     compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.15'
 
-    // Autenticación social
+    // Autenticaciï¿½n social
     compile group: 'org.springframework.social', name: 'spring-social-security', version: '1.1.4.RELEASE'
     compile group: 'org.springframework.social', name: 'spring-social-facebook', version: '1.1.1.RELEASE'
     compile group: 'org.springframework.social', name: 'spring-social-google', version: '1.0.0.RELEASE'
     compile group: 'org.springframework.social', name: 'spring-social-config', version: '1.1.6.RELEASE'
 
-    // Integración con PayPal
+    // Integraciï¿½n con PayPal
     compile('com.paypal.sdk:rest-api-sdk:1.9.3') {
         exclude group: 'org.slf4j'
         exclude group: 'org.apache.logging.log4j'
     }
 
-    // Integración SMSAPI
+    // Integraciï¿½n SMSAPI
     compile group: 'org.json', name: 'json', version:'20140107'
     compile group: 'pl.smsapi', name: 'smsapi-lib', version:'2.5'
 }
@@ -169,3 +170,4 @@ task wrapper(type: Wrapper) {
 
 task stage(dependsOn: 'bootRepackage') {
 }
+
