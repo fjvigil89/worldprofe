@@ -1,6 +1,6 @@
 package es.enxenio.sife1701.util.upload;
 
-import com.sun.javafx.binding.StringFormatter;
+//import com.sun.javafx.binding.StringFormatter;
 import es.enxenio.sife1701.util.ConstantesModel;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
@@ -33,7 +33,8 @@ public class ArchivoEntidadHelper {
     public String gestionarArchivo(boolean eliminar, String nombreArchivoTemporal, String nombreArchivoDto,
                                    String nombreArchivoPersistente, String rutaCarpeta, Long entidadId) {
 
-        rutaCarpeta = StringFormatter.format(rutaCarpeta, entidadId).getValue();
+//        rutaCarpeta = StringFormatter.format(rutaCarpeta, entidadId).getValue();
+    	rutaCarpeta = String.format(rutaCarpeta, entidadId);
         String rutaCarpetacompleta = fileUploadHelper.getRutaBase() + rutaCarpeta;
 
         // Mantenemos el mismo archivo
@@ -68,7 +69,7 @@ public class ArchivoEntidadHelper {
     }
 
     public void eliminarArchivos(String rutaCarpeta, Long entidadId) {
-        File carpetaEntidad = fileUploadHelper.obtenerDirectorio(StringFormatter.format(rutaCarpeta, entidadId).getValue());
+        File carpetaEntidad = fileUploadHelper.obtenerDirectorio(/*StringFormatter.format(rutaCarpeta, entidadId).getValue()*/String.format(rutaCarpeta, entidadId));
         fileUploadHelper.eliminarArchivo(carpetaEntidad);
     }
 

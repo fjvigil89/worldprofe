@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -61,6 +62,23 @@ public class MailService {
     private static final String BASE_URL = "baseUrl";
     private final Logger log = LoggerFactory.getLogger(MailService.class);
 
+    @Value("${spring.mail.host}")
+    private String host;
+    
+    @Value("${spring.mail.port}")
+    private String port;
+    
+    @Value("${spring.mail.username}")
+    private String username;
+    
+    @Value("${spring.mail.password}")
+    private String password;
+    
+    @Value("${mail.smtp.ssl.enable}")
+    private String sslEnable;
+    
+    
+    
     @Inject
     private MyProperties properties;
 
@@ -116,12 +134,19 @@ public class MailService {
 
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();       
 
-
-        mailSender.setHost("smtp.ionos.es");
-        mailSender.setPort(465);
+        //mail sender configs
+//        mailSender.setHost("smtp.ionos.es");
+//        mailSender.setPort(465);
+        
+        mailSender.setHost(this.host);
+        mailSender.setPort(Integer.parseInt(this.port));
+        
         //setting username and password
-        mailSender.setUsername("admin@worldprofe.com");
-        mailSender.setPassword("$Adminworldprofe.2020$");
+//        mailSender.setUsername("admin@worldprofe.com");
+//        mailSender.setPassword("$Adminworldprofe.2020$");
+        mailSender.setUsername(this.username);
+        mailSender.setPassword(this.password);
+        
 
         //setting Spring JavaMailSenderImpl Properties
         Properties mailProp = mailSender.getJavaMailProperties();
@@ -130,7 +155,7 @@ public class MailService {
         mailProp.put("mail.smtp.starttls.enable", "true");
         mailProp.put("mail.smtp.starttls.required", "true");
         mailProp.put("mail.debug", "true");
-        mailProp.put("mail.smtp.ssl.enable", "true");
+        mailProp.put("mail.smtp.ssl.enable", sslEnable);
         mailProp.put("mail.smtp.user", "admin@worldprofe.com");
 
         //preparing Multimedia Message and sending

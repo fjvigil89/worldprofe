@@ -3,7 +3,6 @@
 -- Eliminamos y creamos la BD
 -- DROP DATABASE IF EXISTS sife1701;
 -- CREATE DATABASE sife1701 WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'Spanish_Spain.1252' LC_CTYPE = 'Spanish_Spain.1252';
---
 
 CREATE SCHEMA IF NOT EXISTS comun;
 CREATE SCHEMA IF NOT EXISTS worldprofe;

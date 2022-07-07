@@ -1,6 +1,6 @@
 package es.enxenio.sife1701.model.usuario;
 
-import com.sun.javafx.binding.StringFormatter;
+//import com.sun.javafx.binding.StringFormatter;
 import es.enxenio.sife1701.config.util.SecurityUtils;
 import es.enxenio.sife1701.controller.custom.EmpresaDTO;
 import es.enxenio.sife1701.controller.custom.ProfesorAdminDTO;
@@ -307,8 +307,10 @@ public class UsuarioServiceImpl implements UsuarioService {
 
         if (path != null) {
             archivoEntidadHelper.guardarThumbnailsImagen(ImagenUtil.getThumbnailsPerfil(),
-                StringFormatter.format(ConstantesModel.URL_CARPETA_USUARIOS_PERFIL, usuario.getId()).getValue() + "/" + path,
-                StringFormatter.format(ConstantesModel.URL_CARPETA_USUARIOS_PERFIL, usuario.getId()).getValue());
+                String.format(ConstantesModel.URL_CARPETA_USUARIOS_PERFIL, usuario.getId())+"/"+path,
+            		//StringFormatter.format(ConstantesModel.URL_CARPETA_USUARIOS_PERFIL, usuario.getId()).getValue() + "/" + path,
+                String.format(ConstantesModel.URL_CARPETA_USUARIOS_PERFIL, usuario.getId()));
+                //StringFormatter.format(ConstantesModel.URL_CARPETA_USUARIOS_PERFIL, usuario.getId()).getValue());
         }
         usuario.setFoto(path);
     }

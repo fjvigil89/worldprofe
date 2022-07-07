@@ -46,16 +46,16 @@ spring:
     jpa:
       show-sql: false
 
-    mail:
-      host: smtp.google.com
-      port: 587
-      username: rosel11078@gmail.com
-      password:
+    mail: # Configuración del servidor de correo
+      host: smtp.ionos.es
+      port: 587 
+      username: admin@worldprofe.com
+      password: $Adminworldprofe.2022$
       protocol: smtp
       default-encoding: UTF-8
       properties.mail.smtp:
         auth: true
-        starttls.enable: true
+        starttls.enable: false 
 
     # social:
     #     # see https://developers.google.com/+/web/signin/server-side-flow#step_1_create_a_client_id_and_client_secret

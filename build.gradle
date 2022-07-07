@@ -20,6 +20,7 @@ buildscript {
         classpath group: 'net.ltgt.gradle', name: 'gradle-apt-plugin', version: '0.6'
         classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: spring_boot_version
         classpath group: 'org.springframework.build.gradle', name: 'propdeps-plugin', version: '0.0.7'
+        
     }
 }
 
@@ -156,6 +157,7 @@ dependencies {
     // Integraci�n SMSAPI
     compile group: 'org.json', name: 'json', version:'20140107'
     compile group: 'pl.smsapi', name: 'smsapi-lib', version:'2.5'
+	
 }
 
 compileJava.dependsOn(processResources)
