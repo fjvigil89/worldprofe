@@ -286,8 +286,8 @@
     "info": "Información de la reserva",
     "motivo": {
       "alumno": {
-        "cancelacion": "<p>Escriba un motivo por el cual quiere cancelar el servicio. Este motivo será visible para WorldProfe y para el abogado. Téngalo en cuenta a la hora de redactarlo.</p>",
-        "evaluar": "<p>Indique qué le ha parecido el servicio.</p><p>Este texto será visible para WorldProfe y para el abogado. Téngalo en cuenta a la hora de redactarlo.</p>",
+        "cancelacion": "<p>Escriba un motivo por el cual quiere cancelar el servicio. Este motivo será visible para WorldProfe y para el profesor. Téngalo en cuenta a la hora de redactarlo.</p>",
+        "evaluar": "<p>Indique qué le ha parecido el servicio.</p><p>Este texto será visible para WorldProfe y para el profesor. Téngalo en cuenta a la hora de redactarlo.</p>",
         "title": "Evaluación del/de la alumno/a"
       },
       "profesor": {
