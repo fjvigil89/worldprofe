@@ -7,7 +7,7 @@
     "profesores": "Abogados/as",
     "empresas": "Empresas",
     "alumnos": "Clientes/as",
-    "alumno": "Alumno/a",
+    "alumno": "Cliente/a",
     "profesor": "Abogado/a",
     "menu": {
       "home": "Inicio",
@@ -291,8 +291,8 @@
         "title": "Evaluación del/de la alumno/a"
       },
       "profesor": {
-        "cancelacion": "<p>Si cancela el servicio avise al administrador de WorldProfe. Además, una vez cancele esta clase no podrá aceptar otra en esta franja horaria.</p><p>Escriba un motivo por el cual quiere cancelar el servicio. Este motivo será visible para WorldProfe y para el alumno. Téngalo en cuenta a la hora de redactarlo.</p>",
-        "rechazo": "<p>Si rechaza el servicio avise al administrador de WorldProfe. Además, una vez rechace esta clase no podrá aceptar otra en esta franja horaria.</p><p>Escriba un motivo por el cual quiere rechazar el servicio. Este motivo será visible para WorldProfe y para el alumno. Téngalo en cuenta a la hora de redactarlo.</p>",
+        "cancelacion": "<p>Si cancela el servicio avise al administrador de WorldProfe. Además, una vez cancele esta clase no podrá aceptar otra en esta franja horaria.</p><p>Escriba un motivo por el cual quiere cancelar el servicio. Este motivo será visible para WorldProfe y para el cliente. Téngalo en cuenta a la hora de redactarlo.</p>",
+        "rechazo": "<p>Si rechaza el servicio avise al administrador de WorldProfe. Además, una vez rechace esta clase no podrá aceptar otra en esta franja horaria.</p><p>Escriba un motivo por el cual quiere rechazar el servicio. Este motivo será visible para WorldProfe y para el cliente. Téngalo en cuenta a la hora de redactarlo.</p>",
         "title": "Evaluación del/de la abogado/a"
       }
     },
