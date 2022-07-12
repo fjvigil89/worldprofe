@@ -74,10 +74,23 @@ public class MailService {
     @Value("${spring.mail.password}")
     private String password;
     
-    @Value("${mail.smtp.ssl.enable}")
-    private String sslEnable;
+    @Value("${spring.mail.protocol}")
+    private String protocol;
     
+    @Value("${spring.mail.debug}")
+    private String debug;
     
+    @Value("${spring.mail.properties.mail.smtp.auth}")
+    private String smtpAuth;
+    
+    @Value("${spring.mail.properties.mail.smtp.starttls.enable}")
+    private String smtpStarttlsEnable;
+    
+    @Value("${spring.mail.properties.mail.smtp.socketFactory.class}")
+    private String socketFactoryClass;
+    
+    @Value("${spring.mail.properties.mail.smtp.ssl.protocols}")
+    private String sslProtocols;
     
     @Inject
     private MyProperties properties;
@@ -127,37 +140,27 @@ public class MailService {
     
     public final void prepareAndSendEmail(String htmlMessage, String toMailId,String subject) throws EnvioEmailException{
 
-        //final OneMethod oneMethod = new OneMethod();
-        //final List<char[]> resourceList = oneMethod.getValidatorResource();
-
         //Spring Framework JavaMailSenderImplementation    
 
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();       
 
         //mail sender configs
-//        mailSender.setHost("smtp.ionos.es");
-//        mailSender.setPort(465);
-        
         mailSender.setHost(this.host);
         mailSender.setPort(Integer.parseInt(this.port));
-        
-        //setting username and password
-//        mailSender.setUsername("admin@worldprofe.com");
-//        mailSender.setPassword("$Adminworldprofe.2020$");
         mailSender.setUsername(this.username);
         mailSender.setPassword(this.password);
         
-
         //setting Spring JavaMailSenderImpl Properties
         Properties mailProp = mailSender.getJavaMailProperties();
-        mailProp.put("mail.transport.protocol", "smtp");
-        mailProp.put("mail.smtp.auth", "true");
-        mailProp.put("mail.smtp.starttls.enable", "true");
-        mailProp.put("mail.smtp.starttls.required", "true");
-        mailProp.put("mail.debug", "true");
-        mailProp.put("mail.smtp.ssl.enable", sslEnable);
-        mailProp.put("mail.smtp.user", "admin@worldprofe.com");
+      
+        mailProp.put("mail.transport.protocol", this.protocol);
+        mailProp.put("mail.smtp.auth", this.smtpAuth);
+        mailProp.put("mail.smtp.starttls.enable", this.smtpStarttlsEnable);
+        mailProp.put("mail.debug", this.debug);
+        mailProp.put("mail.smtp.socketFactory.class", this.socketFactoryClass);
+        mailProp.put("mail.smtp.ssl.protocols", this.sslProtocols);
 
+        
         //preparing Multimedia Message and sending
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         try {

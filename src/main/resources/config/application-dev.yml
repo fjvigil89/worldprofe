@@ -48,14 +48,18 @@ spring:
 
     mail: # Configuración del servidor de correo
       host: smtp.ionos.es
-      port: 587 
+      port: 587
       username: admin@worldprofe.com
       password: $Adminworldprofe.2022$
       protocol: smtp
+      debug: true
       default-encoding: UTF-8
       properties.mail.smtp:
         auth: true
-        starttls.enable: false 
+        starttls.enable: true
+        socketFactory.class: javax.net.ssl.SSLSocketFactory
+        ssl.protocols: TLSv1.2
+        
 
     # social:
     #     # see https://developers.google.com/+/web/signin/server-side-flow#step_1_create_a_client_id_and_client_secret
