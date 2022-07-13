@@ -33,14 +33,17 @@ spring:
 
   mail: # Configuración del servidor de correo
     host: smtp.ionos.es
-    port: 587 
+    port: 587
     username: admin@worldprofe.com
-    password: $Adminworldprofe.2020$
+    password: $Adminworldprofe.2022$
     protocol: smtp
+    debug: true
     default-encoding: UTF-8
     properties.mail.smtp:
       auth: true
-      starttls.enable: false 
+      starttls.enable: true
+      socketFactory.class: javax.net.ssl.SSLSocketFactory
+      ssl.protocols: TLSv1.2
 
 properties:
   paypal:
