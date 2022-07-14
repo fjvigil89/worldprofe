@@ -4,11 +4,11 @@
     "administradores": "Administradores",
     "register": "Crear administrador",
     "logout": "Salir",
-    "profesores": "Abogados/as",
+    "profesores": "Profesores/as",
     "empresas": "Empresas",
-    "alumnos": "Clientes/as",
+    "alumnos": "Alumnos/as",
     "alumno": "Alumno/a",
-    "profesor": "Abogado/a",
+    "profesor": "Profesor/a",
     "menu": {
       "home": "Inicio",
       "account": {
@@ -17,9 +17,9 @@
       "administradores": "Administradores",
       "register": "Crear administrador",
       "logout": "Salir",
-      "profesores": "Abogados/as",
+      "profesores": "Profesores/as",
       "empresas": "Empresas",
-      "alumnos": "Clientes/as registrados/as",
+      "alumnos": "Alumnos/as registrados/as",
       "usuarios": "Usuarios",
       "reserva": {
         "title": "Reservas",
@@ -94,8 +94,8 @@
     },
     "form": {
       "tipo": {
-        "alumno": "Registro cliente/a",
-        "profesor": "Registro Abogado/a",
+        "alumno": "Registro alumno/a",
+        "profesor": "Registro Profesor/a",
         "administrador": "Registro administrador"
       },
       "save": "Registrarse",
@@ -192,7 +192,7 @@
   },
   "profesor": {
     "apellidos": "Apellidos",
-    "busqueda": "Búsqueda de abogados/as",
+    "busqueda": "Búsqueda de profesores/as",
     "capacidades": "Capacidades",
     "cif": "CIF",
     "cp": "CP",
@@ -201,7 +201,7 @@
     "dia": "Día",
     "direccion": "Dirección",
     "disponibilidad": "Disponibilidad",
-    "empty": "No hay abogados/as registrados/as",
+    "empty": "No hay profesores/as registrados/as",
     "ensena": "Enseña",
     "fechafin": "Fecha de fin del servicio",
     "fechainicio": "Fecha de comienzo del servicio",
@@ -209,7 +209,7 @@
     "horadia": "Franja horaria",
     "idioma": "Cualquier idioma",
     "idiomas": "Idiomas",
-    "listado": "Listado de abogados/as",
+    "listado": "Listado de profesores/as",
     "localidad": "Localidad",
     "nif": "NIF",
     "nivel": "Nivel",
@@ -220,7 +220,7 @@
     "skype": "Skype",
     "textopresentacion": "Texto de presentación",
     "descripcioncapacidades": "Capacidades",
-    "title": "Abogado/a",
+    "title": "Profesores/a",
     "zonahoraria": "Su zona horaria actual es {{gmt}}"
   },
   "multiselect": {
@@ -273,7 +273,7 @@
         "titulo": "Incidencia",
         "info": "<p>Indique a continuación el motivo por el que el servicio no se ha podido llevar a cabo.</p><p>Realizando esta acción se le devolverá el crédito del servicio al cliente.</p>"
       },
-      "pendiente": "<p>Una vez el abogado realice el servicio, podrás indicar que te ha parecido.</p>"
+      "pendiente": "<p>Una vez el profesor realice el servicio, podrás indicar que te ha parecido.</p>"
     },
     "evaluar": "Evaluar clase",
     "form": {
@@ -286,14 +286,14 @@
     "info": "Información de la reserva",
     "motivo": {
       "alumno": {
-        "cancelacion": "<p>Escriba un motivo por el cual quiere cancelar el servicio. Este motivo será visible para WorldProfe y para el abogado. Téngalo en cuenta a la hora de redactarlo.</p>",
-        "evaluar": "<p>Indique qué le ha parecido el servicio.</p><p>Este texto será visible para WorldProfe y para el abogado. Téngalo en cuenta a la hora de redactarlo.</p>",
+        "cancelacion": "<p>Escriba un motivo por el cual quiere cancelar el servicio. Este motivo será visible para WorldProfe y para el profesor. Téngalo en cuenta a la hora de redactarlo.</p>",
+        "evaluar": "<p>Indique qué le ha parecido el servicio.</p><p>Este texto será visible para WorldProfe y para el profesor. Téngalo en cuenta a la hora de redactarlo.</p>",
         "title": "Evaluación del/de la alumno/a"
       },
       "profesor": {
         "cancelacion": "<p>Si cancela el servicio avise al administrador de WorldProfe. Además, una vez cancele esta clase no podrá aceptar otra en esta franja horaria.</p><p>Escriba un motivo por el cual quiere cancelar el servicio. Este motivo será visible para WorldProfe y para el alumno. Téngalo en cuenta a la hora de redactarlo.</p>",
         "rechazo": "<p>Si rechaza el servicio avise al administrador de WorldProfe. Además, una vez rechace esta clase no podrá aceptar otra en esta franja horaria.</p><p>Escriba un motivo por el cual quiere rechazar el servicio. Este motivo será visible para WorldProfe y para el alumno. Téngalo en cuenta a la hora de redactarlo.</p>",
-        "title": "Evaluación del/de la abogado/a"
+        "title": "Evaluación del/de la profesor/a"
       }
     },
     "norevisadas": "No revisadas",
