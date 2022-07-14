@@ -33,16 +33,16 @@ deploy_war:
   only:
     - master
 
-deploy_optional:
-  stage: optional
-  script:
-   -  rm -rf /usr/local/tomcat8/webapps/plataformawp/ROOT/WEB-INF/classes/config/* 
-   -  cp -r /usr/local/tomcat8/webapps/plataformawp2/ROOT/WEB-INF/classes/config/* /usr/local/tomcat8/webapps/plataformawp/ROOT/WEB-INF/classes/config/
-  tags:
-   - plataformawp
-  when: always
-  only:
-    - master
+#deploy_optional:
+#  stage: optional
+#  script:
+#   -  rm -rf /usr/local/tomcat8/webapps/plataformawp/ROOT/WEB-INF/classes/config/* 
+#   -  cp -r /usr/local/tomcat8/webapps/plataformawp2/ROOT/WEB-INF/classes/config/* /usr/local/tomcat8/webapps/plataformawp/ROOT/WEB-INF/classes/config/
+#  tags:
+#   - plataformawp
+#  when: always
+#  only:
+#    - master
 
 
 deploy_reset:
