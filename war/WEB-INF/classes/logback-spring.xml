@@ -22,7 +22,7 @@
     <!--</appender>-->
 
 
-    <logger name="es.enxenio.sife1701" level="INFO"/>
+    <logger name="es.enxenio.sife1701" level="DEBUG"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>
@@ -54,7 +54,7 @@
         <resetJUL>true</resetJUL>
     </contextListener>
 
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </root>
